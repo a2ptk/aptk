@@ -6,6 +6,8 @@ module.exports = function(grunt) {
   // Static Webserver
   grunt.loadNpmTasks('grunt-contrib-connect');
 
+  grunt.loadNpmTasks('grunt-bowercopy');
+
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -29,10 +31,43 @@ module.exports = function(grunt) {
           keepalive: true
         }
       }
+    },
+    bowercopy: {
+      options: {
+        srcPrefix: 'bower_components'
+      },
+      scripts: {
+        options: {
+          destPrefix: 'public/scripts/vendor'
+        },
+        files: {
+         'fullpage.js/jquery.fullPage.js': 'fullpage.js/jquery.fullPage.js',
+         'fullpage.js/jquery.fullPage.css': 'fullpage.js/jquery.fullPage.css' 
+        }
+      }
+    },
+    compass: {
+      dist: {
+        options: {
+          sassDir: 'public/assets/all/sass',
+          cssDir: 'public/assets/all/stylesheets',
+          raw: 'require "bootstrap-sass"'
+	}
+      }
+    },
+    watch: {
+      css: {
+        files: 'public/assets/all/sass/*.scss',
+        tasks: ['compass']
+      }
     }
   });
 
-  // Default task(s).
-  grunt.registerTask("default", ["connect"]);
+  // Load additional tasks
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
+  // Default task(s).
+  grunt.registerTask('default', ['connect']);
+  grunt.registerTask('watcher', ['watch']);
 };

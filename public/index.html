@@ -3,8 +3,167 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Aishwarya Pathak</title>
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="scripts/vendor/fullpage.js/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="assets/all/stylesheets/bounce.css">
+	<link rel="stylesheet" type="text/css" href="assets/all/stylesheets/style.css">
+
+	<!-- Scripts -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="assets/all/javascripts/bootstrap.min.js"></script>
+	<!-- fullpage.js - https://github.com/alvarotrigo/fullPage.js -->
+	<script type="text/javascript" src="scripts/vendor/fullpage.js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div>supb</div>
+	<nav class="my_nav navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-right">
+	        <li data-menuanchor="homePage" class="active">
+	        	<a href="#homePage">Home <span class="sr-only">(current)</span></a>
+	        </li>
+	        <li data-menuanchor="expPage">
+                <a href="#expPage">Work/Projects</a>
+            </li>
+	        <li data-menuanchor="none">
+                <a href="assets/all/resume/APResW2016.pdf">Resume</a>
+            </li>
+	        <li data-menuanchor="contactPage">
+                <a href="#contactPage">Contact Me</a>
+            </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	<div id="fullpage">
+    	<div class="welcome section">
+    		<div class="container-fluid">
+    			<div class="row">
+    				<div class="col-xs-12 col-md-7 vcenter">
+    					<div class="words">
+			    			Hi, I'm
+			    			<div class="name">Aishwarya Pathak</div>
+			    			I'm an aspiring web developer, currently focused on front-end UI/UX.
+			    			<div class="small_words">
+			    			I am a student at the University of Waterloo doing my undergrad 
+			    			in Software Engineering. I'm a part of the co-op program and I've done co-ops 
+			    			at many different companies. Scroll down to take a look at my work experience!
+			    			</div>
+			    		</div>
+    				</div>
+    				<div class="col-xs-12 col-md-4 vcenter">
+						<div class="image">
+			    			<div>
+			    				<img class="face" src="assets/all/images/me2.jpg">
+			    			</div>
+			    			<div class="pronounce">/aSH-wer-yə pä-tək/</div>
+			    		</div>
+    				</div>
+    			</div>
+    			<div class="row">
+    				<a class="arrow-link fRight" href="#expPage">
+	    				<div class="arrow bounce"></div>
+	    			</a>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="section work_exp">
+    		<div class="container-fluid bootstrap_container">
+                <div class="row words">
+                    Work Experience / Projects
+                </div>
+    			<div class="row row-centered">
+    				<div class="col-md-4 col-centered">
+    					<div id="compass" class="box">
+    						<a href="https://www.compass.com/"><div id="overlay">
+    							<div class="company">
+    								Compass
+    							</div>
+    							<div class="descriptions">
+    								AngularJS | LESS | Jinja | HTML/CSS
+    							</div>
+  							</div></a>
+    					</div>
+    				</div>
+    				<div class="col-md-4 col-centered">
+    					<div id="ncr" class="box">
+    						<a href="http://www.ncr.com/"><div id="overlay">
+    							<div class="company">NCR</div>
+    							<div class="descriptions">
+    								Java | Spring LDAP | SOAP API
+    							</div>
+  							</div></a>
+    					</div>
+    				</div>
+    				<div class="col-md-4 col-centered">
+    					<div id="gm" class="box">
+    						<a href="http://www.theglobeandmail.com/"><div id="overlay">
+    							<div class="company">Globe & Mail</div>
+    							<div class="descriptions">
+    								Javascript | HTML/CSS | Charles | Omniture 
+    							</div>
+  							</div></a>
+    					</div>
+    				</div>
+    				<div class="col-md-4 col-centered">
+    					<div id="gatewayiq" class="box">
+    						<a href="https://gatewaylogin.com/marketing.php"><div id="overlay">
+    							<div class="company">GatewayiQ</div>
+    							<div class="descriptions">
+    								PHP | jQuery | MySQL | HTML/CSS
+    							</div>
+  							</div></a>
+    					</div>
+    				</div>
+    				<div class="col-md-4 col-centered">
+    					<div id="aptk" class="box">
+    						<a href="http://www.aptk.ca"><div id="overlay">
+    							<div class="company">aptk.ca</div>
+    							<div class="descriptions">
+    								 AWS S3 | npm + bower | Grunt | JS/jQuery | SASS/Compass
+    							</div>
+  							</div></a>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="section contact fp-auto-height">
+    		<div class="white_words">Get in touch with me at 
+    			<a href="mailto:a2pathak@uwaterloo.ca">a2pathak@uwaterloo.ca</a>
+	    		<ul class="icons">
+	    			<li><a href="https://twitter.com/ishpattt">
+	    				<img src="assets/all/icons/svg/twitter.svg">
+	    			</a></li>
+	    			<li><a href="https://instagram.com/ishpattt">
+	    				<img src="assets/all/icons/svg/instagram.svg">
+	    			</a></li>
+	    			<li><a href="https://github.com/a2ptk">
+	    				<img src="assets/all/icons/svg/github.svg">
+	    			</a></li>
+	    			<li><a href="https://www.linkedin.com/pub/aishwarya-pathak/76/258/592">
+	    				<img src="assets/all/icons/svg/linkedin.svg">
+	    			</a></li>
+	    		</ul>
+	    		<div class="footernote">
+	    			Built using 
+	    			<a href="https://github.com/alvarotrigo/fullPage.js">fullPage.js</a>, hosted on AWS
+	    		</div>
+    		</div>
+    	</div>
+    </div>
 </body>
 </html>
